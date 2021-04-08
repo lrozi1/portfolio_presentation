@@ -1,199 +1,378 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="">
 
 <head>
+  <script type="text/javascript" class="silex-json-styles" data-silex-static="">
+    window.silex = window.silex || {}
+    window.silex.data = {
+      "site": {
+        "width": 1011
+      },
+      "pages": [{
+        "id": "page-home",
+        "displayName": "Home",
+        "link": {
+          "linkType": "LinkTypePage",
+          "href": "#!page-home"
+        },
+        "canDelete": true,
+        "canProperties": true,
+        "canMove": true,
+        "canRename": true,
+        "opened": false
+      }]
+    }
+  </script>
 
+  <title>Stratup template</title>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Memory++</title>
-  <link rel="stylesheet" type="text/css" title=" stylesheet" href="stylesheet.css">
+  <meta name="generator" content="Silex v2.2.12">
+  <!-- leave this for stats -->
+  <script type="text/javascript" src="https://editor.silex.me/static/2.11/jquery.js" data-silex-static=""></script>
+  <script type="text/javascript" src="https://editor.silex.me/static/2.11/jquery-ui.js" data-silex-static="" data-silex-remove-publish=""></script>
 
-  <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
+  <script type="text/javascript" src="https://editor.silex.me/static/2.11/pageable.js" data-silex-static="" data-silex-remove-publish=""></script>
+  <script type="text/javascript" src="https://editor.silex.me/static/2.11/front-end.js" data-silex-static=""></script>
+  <!-- Normalize -->
+  <link href="https://editor.silex.me/static/2.11/normalize.css" rel="stylesheet" data-silex-static="">
+  <!-- Silex style -->
+  <link href="https://editor.silex.me/static/2.11/front-end.css" rel="stylesheet" data-silex-static="">
+  <style type="text/css" class="silex-style">
+    div.hero {
+      min-height: 95vh;
+    }
 
-  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
-  <!--Montserrat by Julieta Ulanovsky -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    .text-shadow {
+      text-shadow: 0 0 1.5px black;
+    }
+
+    .fancybox {
+      cursor: pointer;
+    }
+
+    .myButton {
+      box-shadow: inset 0px 1px 0px 0px #ffffff;
+      background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+      background-color: #ffffff;
+      border-radius: 0x;
+      border: 0px solid #dcdcdc;
+      display: inline-block;
+      cursor: pointer;
+      color: #666666;
+      font-family: Arial;
+      font-size: 15px;
+      font-weight: bold;
+      padding: 6px 24px;
+      text-decoration: none;
+      text-shadow: 0px 1px 0px #ffffff;
+    }
+
+    .myButton:hover {
+      background: linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+      background-color: #f6f6f6;
+    }
+
+    .myButton:active {
+      position: relative;
+      top: 1px;
+    }
+  </style>
+  <script type="text/javascript" class="silex-script">
+    $(document).ready(function() {
+      $('.fancybox').each(function() {
+        var href = this.getAttribute('data-silex-href') || this.getAttribute('href');
+        if (this.getAttribute('data-silex-href')) {
+          this.removeAttribute('data-silex-href');
+          // for the fancybox script
+          this.setAttribute('href', href);
+          // prevent silex from opening link
+          $(this).off('click');
+        }
+        // this is a galery
+        this.setAttribute('data-fancybox-group', 'group1');
+      });
+      // create the fancybox
+      $('.fancybox').fancybox();
+    });
+  </script>
+  <style type="text/css" class="silex-inline-styles">
+    .body-initial {
+      position: static;
+      background-color: rgba(255, 255, 255, 1);
+    }
+
+    .silex-id-1617857338966-32 {
+      width: 639px;
+      min-height: 56px;
+      position: absolute;
+      top: 1278px;
+      left: 777px;
+    }
+
+    .silex-id-1617858193488-41 {
+      width: 639px;
+      min-height: 56px;
+      position: absolute;
+      top: 1541px;
+      left: 777px;
+    }
+
+    .silex-id-1617860677610-48 {
+      width: 62px;
+      min-height: 32px;
+      background-color: transparent;
+      position: absolute;
+      top: 1333.7999267578125px;
+      left: 777px;
+    }
+
+    .silex-id-1617860681193-50 {
+      width: 62px;
+      min-height: 32px;
+      background-color: transparent;
+      position: absolute;
+      top: 1597.2498168945312px;
+      left: 777px;
+    }
+
+    .silex-id-1617899053148-3 {
+      position: static;
+      background-color: transparent;
+    }
+
+    .silex-id-1617899053148-4 {
+      min-height: 20px;
+      background-color: rgba(255, 255, 255, 1);
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 100px;
+    }
+
+    .silex-id-1617899266343-6 {
+      position: static;
+      background-color: transparent;
+    }
+
+    .silex-id-1617899266344-7 {
+      min-height: 479px;
+      background-color: rgb(255, 255, 255);
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .silex-id-1617899269927-8 {
+      width: 973px;
+      min-height: 172px;
+      position: absolute;
+      top: 15px;
+      left: -1px;
+    }
+
+    .silex-id-1617899894619-11 {
+      width: 685px;
+      min-height: 60px;
+      position: absolute;
+      top: 37px;
+      left: -1px;
+    }
+
+    .silex-id-1617900427272-0 {
+      position: static;
+      background-color: transparent;
+    }
+
+    .silex-id-1617900427273-1 {
+      min-height: 226px;
+      background-color: rgb(255, 255, 255);
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .silex-id-1617900473664-2 {
+      width: 982px;
+      min-height: 400px;
+      background-color: rgb(255, 255, 255);
+      position: absolute;
+      top: 8px;
+      left: 0px;
+    }
+
+    @media only screen and (max-width: 480px) {}
+  </style>
+
+
+
+
+
+
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css" class="silex-style-settings">
+    .website-width {
+      width: 1011px;
+    }
+
+    @media (min-width: 481px) {
+      .silex-editor {
+        min-width: 1211px;
+      }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" class="silex-custom-font">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP" rel="stylesheet" class="silex-custom-font">
+
+
+
+  <style class="silex-prodotype-style" type="text/css" data-style-id="all-style">
+    h1 {
+      font-weight: normal;
+      color: #DDDDDD;
+      text-align: center;
+    }
+
+    h2 {
+      font-weight: normal;
+      color: #999999;
+      text-align: left;
+    }
+
+    .text-element>.silex-element-content {
+      font-family: 'Noto Sans JP', light;
+      font-size: 16px;
+      color: #000000;
+      text-align: left;
+      line-height: 1.5;
+    }
+
+    a {
+      color: #ce8547;
+      text-decoration: none;
+    }
+
+    [data-silex-href] {
+      color: #ce8547;
+      text-decoration: none;
+    }
+
+    b {
+      font-size: 32px;
+      color: #292929;
+    }
+
+    .text-element>.silex-element-content:hover {}
+
+    @media only screen and (max-width: 480px) {
+      h1 {
+        color: #666666;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      .text-element>.silex-element-content {
+        font-size: 160%;
+        color: #666666;
+      }
+    }
+  </style>
+  <style class="silex-prodotype-style" type="text/css" data-style-id="centered-text">
+    .centered-text h1 {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .centered-text.text-element>.silex-element-content {
+      font-size: 32px;
+      color: #ffffff;
+      text-align: center;
+      line-height: 2;
+    }
+
+    .centered-text b {
+      font-size: 36px;
+      color: #ffffff;
+    }
+  </style>
+  <style class="silex-prodotype-style" type="text/css" data-style-id="style-button-text-box">
+    .style-button-text-box.text-element>.silex-element-content {
+      text-align: center;
+    }
+  </style><!-- Silex HEAD tag do not remove -->
+  <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+  <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  <!-- End of Silex HEAD tag do not remove -->
 </head>
 
-<body>
-  <p align="center">
-    <canvas id="canvas"></canvas>
-  </p>
 
-  <h2>
-    Memory++ https://www.khanacademy.org/computer-programming/spin-off-of-project-memory/6639230416945152
-  </h2>
+<body data-silex-id="body-initial" data-silex-type="container-element" class="all-style enable-mobile prevent-resizable prevent-selectable editable-style body-initial silex-runtime" style="">
 
-  <div id="name">
-    <p>Lior Rozin - 2021 Gr 11</p>
+
+
+
+
+
+
+
+
+
+  <div data-silex-type="text-element" class="editable-style text-element silex-id-1617857338966-32 page-home paged-element" data-silex-id="silex-id-1617857338966-32" style="">
+    <div class="silex-element-content normal">
+      <h3><b>Natural Sims: Mountain range<br></b></h3>
+    </div>
   </div>
+  <div data-silex-type="text-element" class="editable-style text-element silex-id-1617858193488-41 page-home paged-element" data-silex-id="silex-id-1617858193488-41" style="">
+    <div class="silex-element-content normal">
+      <h3><b>AP: Programming<br></b></h3>
+    </div>
+  </div>
+  <div data-silex-type="html-element" class="editable-style html-element silex-id-1617860681193-50 page-home paged-element" data-silex-id="silex-id-1617860681193-50" style="">
+    <div class="silex-element-content"><a href="bookshelf/Bookshelf.html" class="myButton">View</a></div>
+  </div>
+  <div data-silex-type="html-element" class="editable-style html-element silex-id-1617860677610-48 page-home paged-element" data-silex-id="silex-id-1617860677610-48" style="">
+    <div class="silex-element-content"><a href="mount/mount.html" class="myButton">View</a></div>
+  </div>
+  <div data-silex-type="container-element" class="editable-style section-element silex-id-1617899053148-3 page-home paged-element" data-silex-id="silex-id-1617899053148-3" style="">
+    <div data-silex-type="container-element" class="editable-style container-element silex-id-1617899053148-4 silex-element-content website-width prevent-draggable" data-silex-id="silex-id-1617899053148-4" style="">
+      <h1 data-silex-type="text-element" class="editable-style text-element silex-id-1617899894619-11" data-silex-id="silex-id-1617899894619-11" style="">
+        <div class="silex-element-content normal"><b>Bookshelf</b></div>
+      </h1>
+    </div>
+  </div>
+  <div data-silex-type="container-element" class="editable-style section-element silex-id-1617899266343-6 page-home paged-element" data-silex-id="silex-id-1617899266343-6" style="">
+    <div data-silex-type="container-element" class="editable-style container-element silex-id-1617899266344-7 silex-element-content website-width prevent-draggable" data-silex-id="silex-id-1617899266344-7" style="">
+      <div data-silex-type="html-element" class="editable-style html-element silex-id-1617900473664-2" data-silex-id="silex-id-1617900473664-2" style="">
+        <div class="silex-element-content">
+          <div class="embedded">
+            <script src="https://www.khanacademy.org/computer-programming/ics4u-project-asteroids-spaceship/4941939736002560/embed.js?editor=yes&amp;buttons=yes&amp;author=yes&amp;embed=yes"></script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div data-silex-type="container-element" class="editable-style section-element silex-id-1617900427272-0 page-home paged-element" data-silex-id="silex-id-1617900427272-0" style="">
+    <div data-silex-type="container-element" class="editable-style container-element silex-id-1617900427273-1 silex-element-content website-width prevent-draggable" data-silex-id="silex-id-1617900427273-1" style="">
+      <div data-silex-type="text-element" class="editable-style text-element silex-id-1617899269927-8" data-silex-id="silex-id-1617899269927-8" style="">
+        <div class="silex-element-content normal">
+          <b>Lorem Ipsum</b> is simply dummy text of the printing and
+          typesetting industry. Lorem Ipsum has been the industry's standard dummy
+          text ever since the 1500s, when an unknown printer took a galley of
+          type and scrambled it to make a type specimen book. It has survived not
+          only five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and more
+          recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
 
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
-
-
-<script id="box">
-  var sketchProc = function(processingInstance) {
-    with(processingInstance) {
-      size(400, 400);
-      frameRate(30);
-
-      //All .js code
-      var Tile = function(x, y, face) {
-        this.x = x;
-        this.y = y;
-        this.size = 70;
-        this.face = face;
-        this.isFaceUp = false;
-        this.isMatch = false;
-      };
-
-      Tile.prototype.draw = function() {
-        fill(214, 247, 202);
-        strokeWeight(2);
-        rect(this.x, this.y, this.size, this.size, 10);
-        if (this.isFaceUp) {
-          image(this.face, this.x, this.y, this.size, this.size);
-        } else {
-          image(getImage("avatars/leaf-green"), this.x, this.y, this.size, this.size);
-        }
-      };
-
-      Tile.prototype.isUnderMouse = function(x, y) {
-        return x >= this.x && x <= this.x + this.size &&
-          y >= this.y && y <= this.y + this.size;
-      };
-
-      // Global config
-      var NUM_COLS = 5;
-      var NUM_ROWS = 4;
-
-      // Declare an array of all possible faces
-      var faces = [
-        getImage("avatars/leafers-seed"),
-        getImage("avatars/leafers-seedling"),
-        getImage("avatars/leafers-sapling"),
-        getImage("avatars/leafers-tree"),
-        getImage("avatars/leafers-ultimate"),
-        getImage("avatars/marcimus"),
-        getImage("avatars/mr-pants"),
-        getImage("avatars/mr-pink"),
-        getImage("avatars/old-spice-man"),
-        getImage("avatars/robot_female_1")
-      ];
-
-      // Make an array which has 2 of each, then randomize it
-      var possibleFaces = faces.slice(0);
-      var selected = [];
-      for (var i = 0; i < (NUM_COLS * NUM_ROWS) / 2; i++) {
-        // Randomly pick one from the array of remaining faces
-        var randomInd = floor(random(possibleFaces.length));
-        var face = possibleFaces[randomInd];
-        // Push twice onto array
-        selected.push(face);
-        selected.push(face);
-        // Remove from array
-        possibleFaces.splice(randomInd, 1);
-      }
-
-      // Now shuffle the elements of that array
-      var shuffleArray = function(array) {
-        var counter = array.length;
-
-        // While there are elements in the array
-        while (counter > 0) {
-          // Pick a random index
-          var ind = Math.floor(Math.random() * counter);
-          // Decrease counter by 1
-          counter--;
-          // And swap the last element with it
-          var temp = array[counter];
-          array[counter] = array[ind];
-          array[ind] = temp;
-        }
-      };
-      shuffleArray(selected);
-
-      // Create the tiles
-      var tiles = [];
-      for (var i = 0; i < NUM_COLS; i++) {
-        for (var j = 0; j < NUM_ROWS; j++) {
-          var tileX = i * 78 + 10;
-          var tileY = j * 78 + 40;
-          var tileFace = selected.pop();
-          tiles.push(new Tile(tileX, tileY, tileFace));
-        }
-      }
-
-      background(255, 255, 255);
-
-      var numTries = 0;
-      var numMatches = 0;
-      var flippedTiles = [];
-      var delayStartFC = null;
-
-      mouseClicked = function() {
-        for (var i = 0; i < tiles.length; i++) {
-          var tile = tiles[i];
-          if (tile.isUnderMouse(mouseX, mouseY)) {
-            if (flippedTiles.length < 2 && !tile.isFaceUp) {
-              tile.isFaceUp = true;
-              flippedTiles.push(tile);
-              if (flippedTiles.length === 2) {
-                numTries++;
-                if (flippedTiles[0].face === flippedTiles[1].face) {
-                  flippedTiles[0].isMatch = true;
-                  flippedTiles[1].isMatch = true;
-                  flippedTiles.length = 0;
-                  numMatches++;
-                }
-                delayStartFC = frameCount;
-              }
-            }
-            loop();
-          }
-        }
-      };
-
-      draw = function() {
-        background(255, 255, 255);
-        if (delayStartFC && (frameCount - delayStartFC) > 30) {
-          for (var i = 0; i < tiles.length; i++) {
-            var tile = tiles[i];
-            if (!tile.isMatch) {
-              tile.isFaceUp = false;
-            }
-          }
-          flippedTiles = [];
-          delayStartFC = null;
-          noLoop();
-        }
-
-        for (var i = 0; i < tiles.length; i++) {
-          tiles[i].draw();
-        }
-
-        if (numMatches === tiles.length / 2) {
-          fill(0, 0, 0);
-          textSize(20);
-          text("You found them all in " + numTries + " tries!", 20, 375);
-        }
-      };
-
-      noLoop();
-
-
-
-
-
-
-
-    }
-  };
-
-
-  var canvas = document.getElementById("canvas");
-
-  var processingInstance = new Processing(canvas, sketchProc);
-</script>
 
 </html>
