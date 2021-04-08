@@ -21,7 +21,7 @@
   </p>
 
   <h2>
-    Bookshelf
+    Bookshelf https://www.khanacademy.org/computer-programming/spin-off-of-project-bookshelf/5951874455404544
   </h2>
 
   <div id="name">
@@ -34,8 +34,11 @@
 <script id="box">
   var sketchProc = function(processingInstance) {
     with(processingInstance) {
+      //PImage img;
       size(400, 400);
       frameRate(30);
+      star = loadImage("https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/space/star.png");
+
 
       //All .js code
       var book = [{
@@ -73,7 +76,7 @@
           text(book[i].title, 15 + i * 100, 29 + 120 * k, 70, 100);
           text(book[i].author, 15 + i * 100, 60 + 120 * k, 70, 100);
           for (var s = 0; s < book[i].stars; s++) {
-            image("star.png", 11 + s * 20 + i * 100, 90 + 120 * k, 20, 30);
+            image(star, 11 + s * 20 + i * 100, 90 + 120 * k, 20, 30);
           }
         }
       }
