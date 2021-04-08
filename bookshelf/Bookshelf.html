@@ -38,8 +38,6 @@
       frameRate(30);
 
       //All .js code
-
-
       var book = [{
           title: "Barney died",
           author: "Barney Barns",
@@ -75,10 +73,12 @@
           text(book[i].title, 15 + i * 100, 29 + 120 * k, 70, 100);
           text(book[i].author, 15 + i * 100, 60 + 120 * k, 70, 100);
           for (var s = 0; s < book[i].stars; s++) {
-            image(getImage("cute/Star"), 11 + s * 20 + i * 100, 90 + 120 * k, 20, 30);
+            image(getImage("https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/space/star.png"), 11 + s * 20 + i * 100, 90 + 120 * k, 20, 30);
           }
         }
       }
+
+
 
 
 
