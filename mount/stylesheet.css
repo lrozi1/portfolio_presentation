@@ -1,0 +1,37 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'ZCOOL KuaiLe', cursive;
+  color: #ffffff;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(#37474f, #212121);
+}
+
+#box {
+  padding-top: 5px;
+  border-style: solid;
+  border-color: #212121;
+  border-width: 6px;
+  padding-left: 3px;
+  padding-bottom: 10px;
+  margin: auto;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  align-content: center;
+  margin: auto;
+  text-align: center;
+}
+
+#name {
+  font-family: 'Merriweather Sans', sans-serif;
+  letter-spacing: -.1px;
+  color: #fff;
+  font-size: 12px;
+  position: absolute;
+  bottom: 0px;
+  right: 5px;
+}

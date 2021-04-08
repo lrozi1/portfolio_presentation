@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mountain range</title>
+  <link rel="stylesheet" type="text/css" title=" stylesheet" href="stylesheet.css">
+
+  <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
+  <!--Montserrat by Julieta Ulanovsky -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+
+<body>
+  <p align="center">
+    <canvas id="canvas"></canvas>
+  </p>
+
+  <h2>
+    Mountain range
+  </h2>
+
+  <div id="name">
+    <p>Lior Rozin - 2021 Gr 11</p>
+  </div>
+
+</body>
+
+
+<script id="box">
+  var sketchProc = function(processingInstance) {
+    with(processingInstance) {
+      size(400, 400);
+      frameRate(30);
+
+      //All .js code
+      //if the background is black (or a singular colour) please click "restart"!
+
+      var zOff = 0.01;
+
+      var bg = function() {
+        var xOff = 0.0;
+
+        for (var x = 0; x < width; x++) {
+          var yOff = 0.0;
+          for (var y = 0; y < height; y++) {
+            var bright = map(noise(xOff, yOff, zOff), 0, 1, 0, 255);
+            stroke(bright, bright, bright);
+            point(x, y);
+            yOff += 0.01;
+          }
+          xOff += 0.01;
+        }
+        zOff += 0.1;
+
+      };
+      var Tree = function(x, y, size) {
+        this.x = x;
+        this.y = y;
+        this.size = size;
+
+      };
+
+      Tree.prototype.draw = function() {
+        noStroke();
+        rect(this.x, this.y, 2, this.size);
+        ellipse(this.x + 1, this.y - 5, 5, 5);
+
+      };
+
+      var drawTree = function(incAmount, seed) {
+        this.incAmount = incAmount;
+        this.seed = seed;
+        for (var t = 0; t < this.incAmount * width; t += this.incAmount + 0.08) {
+          var n = noise(t, this.seed);
+          var y = map(n, 0, 1, 0, height / 2);
+          fill(255 * this.seed, 140 * this.seed, 0);
+          // fill(123);
+          var treeOne = new Tree(t * 100, height - y * this.seed - 9 / this.seed, -5);
+          treeOne.draw();
+        }
+      };
+
+      var drawRange = function(incAmount, seed) {
+        this.incAmount = incAmount;
+        this.seed = seed;
+        for (var t = 0; t < this.incAmount * width; t += this.incAmount) {
+          var n = noise(t, this.seed);
+          var y = map(n, 0, 1, 0, height / 2);
+          fill(255 * this.seed, 140 * this.seed, 0);
+          noStroke();
+          rect(t * 100, height - y * this.seed - 10 / this.seed, 1, 10000);
+        }
+
+
+
+      };
+      bg();
+      noStroke();
+      fill(240, 217, 149, 100);
+      rect(0, 0, width, height);
+
+
+
+      draw = function() {
+
+        for (var i = 3; i > 0; i--) {
+          drawRange(0.01, i * 0.4);
+          drawTree(0.01, i * 0.4);
+
+        }
+      };
+
+
+
+
+
+
+    }
+  };
+
+
+  var canvas = document.getElementById("canvas");
+
+  var processingInstance = new Processing(canvas, sketchProc);
+</script>
+
+</html>
