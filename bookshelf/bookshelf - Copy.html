@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookshelf</title>
+  <link rel="stylesheet" type="text/css" title=" stylesheet" href="stylesheet_bookshelf.css">
+
+  <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
+  <!--Montserrat by Julieta Ulanovsky -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+
+<body>
+  <p align="center">
+    <canvas id="canvas"></canvas>
+  </p>
+
+  <h2>
+    Bookshelf https://www.khanacademy.org/computer-programming/spin-off-of-project-bookshelf/5951874455404544
+  </h2>
+
+  <div id="name">
+    <p>Lior Rozin - 2021 Gr 11</p>
+  </div>
+
+</body>
+
+
+<script id="box">
+  var sketchProc = function(processingInstance) {
+    with(processingInstance) {
+      //PImage img;
+      size(400, 400);
+      frameRate(30);
+      star = loadImage("https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/space/star.png");
+
+
+      //All .js code
+      var book = [{
+          title: "Barney died",
+          author: "Barney Barns",
+          stars: 3,
+          color: color(214, 255, 219)
+        },
+        {
+          title: "Barney, not again!",
+          author: "Barney Barnibus",
+          stars: 3,
+          color: color(224, 208, 208)
+        },
+        {
+          title: "Visit the barn!",
+          author: "Barney Barnacks",
+          stars: 4,
+          color: color(238, 237, 242)
+        },
+
+      ];
+      for (var k = 0; k < 5; k++) {
+
+        // draw shelf
+        fill(173, 117, 33);
+        rect(0, 120 * k, width, 10);
+
+        for (var i = 0; i < book.length; i++) {
+          // draw one book
+          //fill(214, 255, 219);
+          fill(book[i].color);
+          rect(10 + i * 100, 20 + 120 * k, 90, 100);
+          fill(0, 0, 0);
+          text(book[i].title, 15 + i * 100, 29 + 120 * k, 70, 100);
+          text(book[i].author, 15 + i * 100, 60 + 120 * k, 70, 100);
+          for (var s = 0; s < book[i].stars; s++) {
+            image(star, 11 + s * 20 + i * 100, 90 + 120 * k, 20, 30);
+          }
+        }
+      }
+
+
+
+
+
+
+
+
+
+    }
+  };
+
+
+  var canvas = document.getElementById("canvas");
+
+  var processingInstance = new Processing(canvas, sketchProc);
+</script>
+
+</html>
