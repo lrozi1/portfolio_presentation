@@ -4,105 +4,94 @@
 <head>
 
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>What's for dinner?</title>
   <link rel="stylesheet" type="text/css" title=" stylesheet" href="stylesheet_bookshelf.css">
 
-<script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
 
-<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
-      <!--Montserrat by Julieta Ulanovsky -->
-<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
+  <!--Montserrat by Julieta Ulanovsky -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 
 <body>
-    <p align="center">
-      <canvas id="canvas"></canvas>
-    </p>
+  <p align="center">
+    <canvas id="canvas"></canvas>
+  </p>
 
-    <h2>
-      What's for Dinner? - javascript
-    </h2>
+  <h2>
+    What's for Dinner? - javascript
+  </h2>
 
-    <div id="name">
-      <p>Lior Rozin - 2019 Gr 9</p>
-    </div>
+  <div id="name">
+    <p>Lior Rozin - 2019 Gr 9</p>
+  </div>
 
- </body>
-
-
-  <script id="box">
-     var sketchProc = function(processingInstance) {
-      with (processingInstance) {
-         size(400, 400);
-         frameRate(30);
-
-//All .js code
+</body>
 
 
-// wooden table
-background(186, 145, 20);
-fill(158, 127, 35);
-noStroke();
-rect(25,8,354,396,13);
+<script id="box">
+  var sketchProc = function(processingInstance) {
+    with(processingInstance) {
+      size(400, 400);
+      frameRate(30);
 
-// plate
-stroke(0, 0, 0);
-fill(255, 255, 255);
-ellipse(200, 200, 350, 350);
-fill(240, 240, 240);
-ellipse(200, 200, 300, 300);
-noStroke();
-fill(255, 255, 255);
-ellipse(200, 200, 280, 280);
-
-//cucumbers
-stroke(106, 163, 59);
-fill(192, 235, 112);
-ellipse(152, 258, 62, 60);
-fill(225, 247, 180);
-noStroke();
-ellipse(152, 258, 51, 50);
-fill(204, 245, 115);
-ellipse(151, 258, 26, 20);
+      //All .js code
 
 
-//cucumbers
-stroke(106, 163, 59);
-fill(192, 235, 112);
-ellipse(245, 127, 63, 60);
-fill(225, 247, 180);
-noStroke();
-ellipse(245, 127, 51, 50);
-fill(204, 245, 115);
-ellipse(245, 127, 26, 20);
+      var book = [{
+          title: "Barney died",
+          author: "Barney Barns",
+          stars: 3,
+          color: color(214, 255, 219)
+        },
+        {
+          title: "Barney, not again!",
+          author: "Barney Barnibus",
+          stars: 3,
+          color: color(224, 208, 208)
+        },
+        {
+          title: "Visit the barn!",
+          author: "Barney Barnacks",
+          stars: 4,
+          color: color(238, 237, 242)
+        },
 
-stroke(106, 163, 59);
-fill(192, 235, 112);
-ellipse(145, 161, 63, 60);
-fill(225, 247, 180);
-noStroke();
-ellipse(142, 160, 51, 50);
-fill(204, 245, 115);
-ellipse(144, 167, 26, 20);
+      ];
+      for (var k = 0; k < 5; k++) {
 
-stroke(106, 163, 59);
-fill(192, 235, 112);
-ellipse(256, 235, 63, 60);
-fill(225, 247, 180);
-noStroke();
-ellipse(258, 235, 51, 50);
-fill(204, 245, 115);
-ellipse(250, 235, 26, 20);
+        // draw shelf
+        fill(173, 117, 33);
+        rect(0, 120 * k, width, 10);
+
+        for (var i = 0; i < book.length; i++) {
+          // draw one book
+          //fill(214, 255, 219);
+          fill(book[i].color);
+          rect(10 + i * 100, 20 + 120 * k, 90, 100);
+          fill(0, 0, 0);
+          text(book[i].title, 15 + i * 100, 29 + 120 * k, 70, 100);
+          text(book[i].author, 15 + i * 100, 60 + 120 * k, 70, 100);
+          for (var s = 0; s < book[i].stars; s++) {
+            image(getImage("cute/Star"), 11 + s * 20 + i * 100, 90 + 120 * k, 20, 30);
+          }
+        }
+      }
 
 
 
-     }};
 
 
-     var canvas = document.getElementById("canvas");
 
-     var processingInstance = new Processing(canvas, sketchProc);
-  </script>
+    }
+  };
 
- </html>
+
+  var canvas = document.getElementById("canvas");
+
+  var processingInstance = new Processing(canvas, sketchProc);
+</script>
+
+</html>
