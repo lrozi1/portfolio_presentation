@@ -1,28 +1,7 @@
-<!DOCTYPE html>
-<html lang="">
-
-<head>
-  <script type="text/javascript" class="silex-json-styles" data-silex-static="">
+<!DOCTYPE html><html lang=""><head><script type="text/javascript" class="silex-json-styles" data-silex-static="">
     window.silex = window.silex || {}
-    window.silex.data = {
-      "site": {
-        "width": 1011
-      },
-      "pages": [{
-        "id": "page-home",
-        "displayName": "Home",
-        "link": {
-          "linkType": "LinkTypePage",
-          "href": "#!page-home"
-        },
-        "canDelete": true,
-        "canProperties": true,
-        "canMove": true,
-        "canRename": true,
-        "opened": false
-      }]
-    }
-  </script>
+    window.silex.data = {"site":{"width":1011},"pages":[{"id":"page-home","displayName":"Home","link":{"linkType":"LinkTypePage","href":"#!page-home"},"canDelete":true,"canProperties":true,"canMove":true,"canRename":true,"opened":false}]}</script>
+  
 
 
   <title>Flocking simulation</title>
@@ -38,46 +17,7 @@
   <link href="https://editor.silex.me/static/2.11/normalize.css" rel="stylesheet" data-silex-static="">
   <!-- Silex style -->
   <link href="https://editor.silex.me/static/2.11/front-end.css" rel="stylesheet" data-silex-static="">
-  <style type="text/css" class="silex-style">
-    div.hero {
-      min-height: 95vh;
-    }
-
-    .text-shadow {
-      text-shadow: 0 0 1.5px black;
-    }
-
-    .fancybox {
-      cursor: pointer;
-    }
-
-    .myButton {
-      box-shadow: inset 0px 1px 0px 0px #ffffff;
-      background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
-      background-color: #ffffff;
-      border-radius: 0x;
-      border: 0px solid #dcdcdc;
-      display: inline-block;
-      cursor: pointer;
-      color: #666666;
-      font-family: Arial;
-      font-size: 15px;
-      font-weight: bold;
-      padding: 6px 24px;
-      text-decoration: none;
-      text-shadow: 0px 1px 0px #ffffff;
-    }
-
-    .myButton:hover {
-      background: linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
-      background-color: #f6f6f6;
-    }
-
-    .myButton:active {
-      position: relative;
-      top: 1px;
-    }
-  </style>
+  <style type="text/css" class="silex-style">div.hero {min-height: 95vh;}.text-shadow {text-shadow: 0 0 1.5px black;}.fancybox {cursor: pointer;}.myButton {box-shadow: inset 0px 1px 0px 0px #ffffff; background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%); background-color: #ffffff; border-radius: 0x; border: 0px solid #dcdcdc; display: inline-block; cursor: pointer; color: #666666; font-family: Arial; font-size: 15px; font-weight: bold; padding: 6px 24px; text-decoration: none; text-shadow: 0px 1px 0px #ffffff;}.myButton:hover {background: linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%); background-color: #f6f6f6;}.myButton:active {position: relative; top: 1px;}</style>
   <script type="text/javascript" class="silex-script">
     $(document).ready(function() {
       $('.fancybox').each(function() {
@@ -96,114 +36,7 @@
       $('.fancybox').fancybox();
     });
   </script>
-  <style type="text/css" class="silex-inline-styles">
-    .body-initial {
-      position: static;
-      background-color: rgba(255, 255, 255, 1);
-    }
-
-    .silex-id-1617857338966-32 {
-      width: 639px;
-      min-height: 56px;
-      position: absolute;
-      top: 1278px;
-      left: 777px;
-    }
-
-    .silex-id-1617858193488-41 {
-      width: 639px;
-      min-height: 56px;
-      position: absolute;
-      top: 1541px;
-      left: 777px;
-    }
-
-    .silex-id-1617860677610-48 {
-      width: 62px;
-      min-height: 32px;
-      background-color: transparent;
-      position: absolute;
-      top: 1333.7999267578125px;
-      left: 777px;
-    }
-
-    .silex-id-1617860681193-50 {
-      width: 62px;
-      min-height: 32px;
-      background-color: transparent;
-      position: absolute;
-      top: 1597.2498168945312px;
-      left: 777px;
-    }
-
-    .silex-id-1617899053148-3 {
-      position: static;
-      background-color: transparent;
-    }
-
-    .silex-id-1617899053148-4 {
-      min-height: 20px;
-      background-color: rgba(255, 255, 255, 1);
-      position: relative;
-      margin-left: auto;
-      margin-right: auto;
-      padding-top: 100px;
-    }
-
-    .silex-id-1617899266343-6 {
-      position: static;
-      background-color: transparent;
-    }
-
-    .silex-id-1617899266344-7 {
-      min-height: 479px;
-      background-color: rgb(255, 255, 255);
-      position: relative;
-      margin-left: auto;
-      margin-right: auto;
-      display: flex;
-      align-items: center;
-      justify-content: stretch;
-    }
-
-    .silex-id-1617899269927-8 {
-      width: 973px;
-      min-height: 172px;
-      position: absolute;
-      top: 15px;
-      left: -1px;
-    }
-
-    .silex-id-1617899894619-11 {
-      width: 685px;
-      min-height: 60px;
-      position: absolute;
-      top: 37px;
-      left: -1px;
-    }
-
-    .silex-id-1617900427272-0 {
-      position: static;
-      background-color: transparent;
-    }
-
-    .silex-id-1617900427273-1 {
-      min-height: 226px;
-      background-color: rgb(255, 255, 255);
-      position: relative;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .silex-id-1617900473664-2 {
-      width: 511px;
-      min-height: 507px;
-      background-color: rgb(255, 255, 255);
-      position: static;
-    }
-
-    @media only screen and (max-width: 480px) {}
-  </style>
+  <style type="text/css" class="silex-inline-styles">.body-initial {position: static; background-color: rgba(255,255,255,1);}.silex-id-1617857338966-32 {width: 639px; min-height: 56px; position: absolute; top: 1278px; left: 777px;}.silex-id-1617858193488-41 {width: 639px; min-height: 56px; position: absolute; top: 1541px; left: 777px;}.silex-id-1617860677610-48 {width: 62px; min-height: 32px; background-color: transparent; position: absolute; top: 1333.7999267578125px; left: 777px;}.silex-id-1617860681193-50 {width: 62px; min-height: 32px; background-color: transparent; position: absolute; top: 1597.2498168945312px; left: 777px;}.silex-id-1617899053148-3 {position: static; background-color: transparent;}.silex-id-1617899053148-4 {min-height: 20px; background-color: rgba(255,255,255,1); position: relative; margin-left: auto; margin-right: auto; padding-top: 100px;}.silex-id-1617899266343-6 {position: static; background-color: transparent;}.silex-id-1617899266344-7 {min-height: 479px; background-color: rgb(255, 255, 255); position: relative; margin-left: auto; margin-right: auto; display: flex; align-items: center; justify-content: stretch;}.silex-id-1617899269927-8 {width: 973px; min-height: 192px; position: absolute; top: 14px; left: -1px;}.silex-id-1617899894619-11 {width: 685px; min-height: 60px; position: absolute; top: 37px; left: -1px;}.silex-id-1617900427272-0 {position: static; background-color: transparent;}.silex-id-1617900427273-1 {min-height: 226px; background-color: rgb(255, 255, 255); position: relative; margin-left: auto; margin-right: auto;}.silex-id-1617900473664-2 {width: 511px; min-height: 507px; background-color: rgb(255, 255, 255); position: static;}@media only screen and (max-width: 480px) {}</style>
 
 
 
@@ -215,102 +48,19 @@
 
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style type="text/css" class="silex-style-settings">
-    .website-width {
-      width: 1011px;
-    }
-
-    @media (min-width: 481px) {
-      .silex-editor {
-        min-width: 1211px;
-      }
-    }
-  </style>
+  <style type="text/css" class="silex-style-settings">.website-width {width: 1011px;}@media (min-width: 481px) {.silex-editor {min-width: 1211px;}}</style>
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" class="silex-custom-font">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP" rel="stylesheet" class="silex-custom-font">
 
 
 
-  <style class="silex-prodotype-style" type="text/css" data-style-id="all-style">
-    h1 {
-      font-weight: normal;
-      color: #DDDDDD;
-      text-align: center;
-    }
-
-    h2 {
-      font-weight: normal;
-      color: #999999;
-      text-align: left;
-    }
-
-    .text-element>.silex-element-content {
-      font-family: 'Noto Sans JP', light;
-      font-size: 16px;
-      color: #000000;
-      text-align: left;
-      line-height: 1.5;
-    }
-
-    a {
-      color: #ce8547;
-      text-decoration: none;
-    }
-
-    [data-silex-href] {
-      color: #ce8547;
-      text-decoration: none;
-    }
-
-    b {
-      font-size: 32px;
-      color: #292929;
-    }
-
-    .text-element>.silex-element-content:hover {}
-
-    @media only screen and (max-width: 480px) {
-      h1 {
-        color: #666666;
-      }
-
-      h2 {
-        text-align: center;
-      }
-
-      .text-element>.silex-element-content {
-        font-size: 160%;
-        color: #666666;
-      }
-    }
-  </style>
-  <style class="silex-prodotype-style" type="text/css" data-style-id="centered-text">
-    .centered-text h1 {
-      font-family: 'Roboto', sans-serif;
-    }
-
-    .centered-text.text-element>.silex-element-content {
-      font-size: 32px;
-      color: #ffffff;
-      text-align: center;
-      line-height: 2;
-    }
-
-    .centered-text b {
-      font-size: 36px;
-      color: #ffffff;
-    }
-  </style>
-  <style class="silex-prodotype-style" type="text/css" data-style-id="style-button-text-box">
-    .style-button-text-box.text-element>.silex-element-content {
-      text-align: center;
-    }
-  </style>
-  <!-- Silex HEAD tag do not remove -->
-  <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
-  <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  <!-- End of Silex HEAD tag do not remove -->
-</head>
+  <style class="silex-prodotype-style" type="text/css" data-style-id="all-style">h1 {font-weight: normal; color: #DDDDDD; text-align: center;}h2 {font-weight: normal; color: #999999; text-align: left;}.text-element>.silex-element-content {font-family: 'Noto Sans JP', light; font-size: 16px; color: #000000; text-align: left; line-height: 1.5;}a {color: #ce8547; text-decoration: none;}[data-silex-href] {color: #ce8547; text-decoration: none;}b {font-size: 32px; color: #292929;}.text-element>.silex-element-content:hover {}@media only screen and (max-width: 480px) {h1 {color: #666666;}h2 {text-align: center;}.text-element>.silex-element-content {font-size: 160%; color: #666666;}}</style>
+  <style class="silex-prodotype-style" type="text/css" data-style-id="centered-text">.centered-text h1 {font-family: 'Roboto', sans-serif;}.centered-text.text-element>.silex-element-content {font-size: 32px; color: #ffffff; text-align: center; line-height: 2;}.centered-text b {font-size: 36px; color: #ffffff;}</style>
+  <style class="silex-prodotype-style" type="text/css" data-style-id="style-button-text-box">.style-button-text-box.text-element>.silex-element-content {text-align: center;}</style>
+  
+<!-- Silex HEAD tag do not remove --><link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- End of Silex HEAD tag do not remove --></head>
 
 
 <body data-silex-id="body-initial" data-silex-type="container-element" class="all-style enable-mobile prevent-resizable prevent-selectable editable-style body-initial silex-runtime" style="">
@@ -333,9 +83,9 @@
     <div data-silex-type="container-element" class="editable-style container-element silex-id-1617900427273-1 silex-element-content website-width prevent-draggable" data-silex-id="silex-id-1617900427273-1" style="">
       <div data-silex-type="text-element" class="editable-style text-element silex-id-1617899269927-8" data-silex-id="silex-id-1617899269927-8" style="">
         <div class="silex-element-content normal">
-          <b>The Coding Challenge</b> is a challenge created by The Coding Train. Daniel Shiffman codes a different project everytime, in either p5.js, or Processing. One of out projects this year was chosing a coding challenge, compelting it, and
-          then teaching otu class about it. <br><br> I learned a lot from this challenge.I had trouble understanding how the particles work, so there was a lot of tinckering happening. I refactored the original project, into a liquid-like simualtion.
-          Although it still follws the flocking rules. I learned about forces, particles, collisions, and gravity.
+          <b>The Coding Challenge</b> is a challenge created by The Coding Train. Daniel Shiffman codes a different project every time, in either p5.js, or Processing. One of out projects this year was choosing a coding challenge,&nbsp; completing it, and
+          then teaching our class about it. <br><br> I learned a lot from this challenge.I had trouble understanding how the particles work, so there was a lot of tinkering happening. I refactored the original project, into a liquid-like simulation.
+          Although it still follows the flocking rules. I learned about forces, particles, collisions, and gravity.
 
         </div>
       </div>
@@ -343,6 +93,6 @@
   </div>
 
 
-</body>
 
-</html>
+
+</body></html>
